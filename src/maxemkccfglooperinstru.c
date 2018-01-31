@@ -1,0 +1,118 @@
+/* $Id:$ */
+
+/*
+ * Copyright 2009 ZOHO Corp. All Rights Reserved.
+ * This software is the property of ZOHO Corp. Distribution
+ * or deployment of the source or derived binaries of this
+ * software are not permitted without a OEM or distribution
+ * license from ZOHO Corp.
+ */
+
+/**************************************************************************
+ *  File	: maxemkccfglooperinstru.c.
+ *
+ *  Purpose	: File contains get and set methods for each scalar 
+ * 			  of the module maxEmkcCfgLooper.
+ *
+ *  Author	: WebNMS Agent Toolkit C Edition 6
+ *
+ *  Date	: Fri Jan 26 16:40:44 MSK 2018
+ *
+ *  Docs	: Yes. 
+ ***************************************************************************/
+
+#ifdef  __cplusplus
+extern "C" {
+#endif /* #ifdef  __cplusplus */
+
+/* User code starts here */
+/* User code ends here */
+
+/*
+ * If the user wants to add their code, then the code has to be
+ * added in between the above mentioned comments. Otherwise, on
+ * regeneration, the user added code will be overwritten.
+ * The above mentioned comments can be used at any place in this file.
+ */
+
+#include "config.h"
+#include "genincludes.h"
+#include "maxemkccfglooper.h" 
+
+/*****************************************************************************
+ *	Function Name	: GetMaxEmkcCfgLooperEntryRowChoice()
+ *
+ *	Args			: 1. Pointer of the variable value length(IN/OUT).
+ *					  2. Status which is used to return SNMP Error (IN/OUT).
+ *
+ *	Returns			: The Current value of "maxEmkcCfgLooperEntryRowChoice".
+ *
+ *	Task			: Get method for scalar variable maxEmkcCfgLooperEntryRowChoice.
+ *
+ *					  "Description"
+ *
+ *	See Also		: SetMaxEmkcCfgLooperEntryRowChoice().
+ *
+ *	Docs			: Yes.
+ *
+ *	Bugs			: 
+ *****************************************************************************/
+U_CHAR *GetMaxEmkcCfgLooperEntryRowChoice(INT32 *varValLen, U_CHAR *status)
+{
+	DEBUGMSG1("\n\t@@@@@ Inside GetMaxEmkcCfgLooperEntryRowChoice() @@@@@\n");
+
+	/* Please provide your code to instrument "maxEmkcCfgLooperEntryRowChoice" here */
+
+	*varValLen = sizeof(gv_maxEmkcCfgLooperEntryRowChoice);
+	return (U_CHAR *)&gv_maxEmkcCfgLooperEntryRowChoice;
+}
+
+/*****************************************************************************
+ *	Function Name	: SetMaxEmkcCfgLooperEntryRowChoice()
+ *
+ *	Args			: 1. Pointer of the variable to set (IN).
+ *					  2. Pointer of the variable value length (IN/OUT).
+ *					  3. Status which is used to return SNMP Error (IN/OUT).
+ *
+ *	Returns			: The Current value of "maxEmkcCfgLooperEntryRowChoice".
+ *
+ *	Task			: Set method for scalar variable maxEmkcCfgLooperEntryRowChoice.
+ *
+ *					  "Description"
+ *
+ *	See Also		: GetMaxEmkcCfgLooperEntryRowChoice().
+ *
+ *	Docs			: Yes.
+ *
+ *	Bugs			: 
+ *****************************************************************************/
+U_CHAR *SetMaxEmkcCfgLooperEntryRowChoice(U_CHAR *varVal, INT32 *varValLen, U_CHAR *status)
+{
+	U_INT32	value;
+
+	DEBUGMSG1("\n\t@@@@@ Inside SetMaxEmkcCfgLooperEntryRowChoice() @@@@@\n");
+
+	value = (* ((U_INT32*)(varVal)));
+
+	if (*status == VALIDATE)
+	{
+		/* Extra Checkings can be done here */
+	}
+	else
+	{
+		gv_maxEmkcCfgLooperEntryRowChoice = value;
+		/* Please provide your code to instrument "maxEmkcCfgLooperEntryRowChoice" here */
+	}
+
+	*varValLen = sizeof(gv_maxEmkcCfgLooperEntryRowChoice);
+	return (U_CHAR *)&gv_maxEmkcCfgLooperEntryRowChoice;
+}
+
+
+#ifdef  __cplusplus
+}
+#endif /* #ifdef  __cplusplus */
+
+/*****************************************************************************
+ *						 End of maxemkccfglooperinstru.c
+ *****************************************************************************/
