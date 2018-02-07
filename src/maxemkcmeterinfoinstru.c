@@ -38,6 +38,7 @@ extern "C" {
 #include "config.h"
 #include "genincludes.h"
 #include "maxemkcmeterinfo.h" 
+#include "nautilus.h"
 
 /*****************************************************************************
  *	Function Name	: GetMaxEmkcMeterCpuSoftwareVersion()
@@ -61,13 +62,22 @@ U_CHAR *GetMaxEmkcMeterCpuSoftwareVersion(INT32 *varValLen, U_CHAR *status)
 {
 	DEBUGMSG1("\n\t@@@@@ Inside GetMaxEmkcMeterCpuSoftwareVersion() @@@@@\n");
 
-	CHECK_FOR_NULL(gv_maxEmkcMeterCpuSoftwareVersion);
+//	CHECK_FOR_NULL(gv_maxEmkcMeterCpuSoftwareVersion);
 
 	/* Please provide your code to instrument "maxEmkcMeterCpuSoftwareVersion" here */
 
 	char str[80];
+
+GoString a1,a2;
+AllocateAndDoStrcpy((CHAR **)&a1.p,"-----------------HELLO--------------123------");
+a1.n=__Strlen((CHAR *)a1.p);
+a2=TestFunc(a1);
+strncpy(str,a2.p,a2.n);
+DEBUGMSG2("\n+++++%s\n",str);
+
 	strcpy(str, "Ver 10.0.0.4 from 1/30/2018");
-	AllocateAndDoStrcpy((CHAR **)&gv_maxEmkcMeterCpuSoftwareVersion, str);
+	AllocateAndDoStrcpy((CHAR **)&gv_maxEmkcMeterCpuSoftwareVersion,str);
+        *status=SNMP_ERR_NOERROR;
 
 	*varValLen = __Strlen((CHAR *)gv_maxEmkcMeterCpuSoftwareVersion);
 	return (U_CHAR *)gv_maxEmkcMeterCpuSoftwareVersion;
