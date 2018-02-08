@@ -36,6 +36,8 @@ extern "C" {
  */
 
 //тестовые изменения 18:21 07-02-2018
+//ANDRE
+
 #include "config.h"
 #include "genincludes.h"
 
