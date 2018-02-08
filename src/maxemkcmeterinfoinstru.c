@@ -66,8 +66,7 @@ U_CHAR *GetMaxEmkcMeterCpuSoftwareVersion(INT32 *varValLen, U_CHAR *status)
 
 	/* Please provide your code to instrument "maxEmkcMeterCpuSoftwareVersion" here */
 
-	char str[80];
-
+char str[80];
 GoString a1,a2;
 AllocateAndDoStrcpy((CHAR **)&a1.p,"-----------------HELLO--------------123----");
 a1.n=__Strlen((CHAR *)a1.p);
